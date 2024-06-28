@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Cambiado de center a flex-start */
-    height: 100dvh;
+    height: 100svh;
     margin: 0;
 }
 
@@ -17,7 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white; /* Añadido para asegurar contraste */
     overflow-y: auto; /* Añadido para permitir el desplazamiento si es necesario */
-    max-height: 90vh; /* Para asegurar que no se salga de la vista */
+    max-height: 90svh; /* Para asegurar que no se salga de la vista */
 }
 
 h1 {
