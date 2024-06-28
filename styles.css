@@ -5,10 +5,10 @@ body {
     align-items: flex-start; /* Cambiado de center a flex-start */
     height: 100vh;
     margin: 0;
-    padding: 20px; /* Añadido padding para evitar que el contenido toque los bordes de la ventana */
 }
 
 .container {
+    padding-top: 20px;
     width: 80%;
     max-width: 800px;
     padding: 20px;
