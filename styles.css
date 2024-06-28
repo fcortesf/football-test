@@ -2,9 +2,10 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiado de center a flex-start */
     height: 100vh;
     margin: 0;
+    padding: 20px; /* Añadido padding para evitar que el contenido toque los bordes de la ventana */
 }
 
 .container {
@@ -14,6 +15,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Añadido para asegurar contraste */
+    overflow-y: auto; /* Añadido para permitir el desplazamiento si es necesario */
+    max-height: 90vh; /* Para asegurar que no se salga de la vista */
 }
 
 h1 {
@@ -33,6 +37,7 @@ form {
 input[type="text"], input[type="number"], select {
     width: 30%;
     padding: 5px;
+    box-sizing: border-box; /* Añadido para asegurar que el padding no altere el tamaño */
 }
 
 button {

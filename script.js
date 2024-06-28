@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const playerCount = 15;
+    const playerNames = ["Fer", "Jorgillo", "Rubal", "Grandu", "Joselu", "Redo", "Pablillo", "Juanky", "Rober", "Tomas", "Josema", "Alvaro", "Mikel", "Jhony", "Mario"];
     const playerInputs = document.getElementById("playerInputs");
 
-    for (let i = 0; i < playerCount; i++) {
+    playerNames.forEach((name, i) => {
         let div = document.createElement("div");
         div.className = "player-input";
         div.innerHTML = `
-            <input type="text" id="playerName${i}" placeholder="Nombre del jugador ${i + 1}" required>
+            <input type="text" id="playerName${i}" value="${name}" readonly>
             <input type="number" id="playerSkill${i}" placeholder="Habilidad (1-10)" min="1" max="10" required>
             <select id="playerAvoid${i}" multiple>
                 <option value="">No jugar con...</option>
-                ${[...Array(playerCount).keys()].map(j => `<option value="player${j}">Jugador ${j + 1}</option>`).join('')}
+                ${playerNames.map((n, j) => `<option value="player${j}">${n}</option>`).join('')}
             </select>
         `;
         playerInputs.appendChild(div);
-    }
+    });
 });
 
 function generateTeams() {
