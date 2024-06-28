@@ -30,14 +30,16 @@ form {
 
 .player-input {
     display: flex;
+    flex-direction: column; /* Cambiado a columna para dispositivos móviles */
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
 input[type="text"], input[type="number"], select {
-    width: 30%;
-    padding: 5px;
-    box-sizing: border-box; /* Añadido para asegurar que el padding no altere el tamaño */
+    width: 100%; /* Cambiado a 100% para móviles */
+    margin-bottom: 5px; /* Añadido margen inferior para separar los elementos */
+    padding: 10px;
+    box-sizing: border-box; 
 }
 
 button {
@@ -70,4 +72,15 @@ button:hover {
 .team ul {
     list-style-type: none;
     padding: 0;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (min-width: 600px) {
+    .player-input {
+        flex-direction: row; /* Cambiado a fila para pantallas más grandes */
+    }
+
+    input[type="text"], input[type="number"], select {
+        width: 30%; /* Ajustado a 30% para pantallas más grandes */
+    }
 }
