@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* Cambiado de center a flex-start */
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
 }
 
